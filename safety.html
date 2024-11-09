@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Safety Measures for Homemade Biogas Digesters</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+  header {
+            background-color: #4CAF50; /* Darker green */
+            padding: 15px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #menu-button {
+            background-color: white;
+            color: #4CAF50;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #search-bar {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #388E3C; /* Slightly darker green */
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+            transition: left 0.3s ease;
+            z-index: 10;
+        }
+
+        #sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #sidebar ul li {
+            padding: 15px;
+        }
+
+        #sidebar ul li button {
+            width: 100%;
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        #sidebar ul li button:hover {
+            background-color: #f0f0f0; /* Hover effect */
+        }
+
+        .logo {
+            height: 50px;
+            width: 50px;
+            margin-left: 20px;
+            border-radius: 50%;
+        }
+
+        .information {
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            width: 700px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #388E3C;
+        }
+
+        h2 {
+            color: #4CAF50;
+            margin-top: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .image {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button id="menu-button">Menu</button>
+        <img src="/IMG_2105.jpeg" alt="Company Logo" class="logo">
+        <input type="text" id="search-bar" placeholder="Search...">
+    </header>
+    <nav id="sidebar">
+        <ul>
+            <li><button onclick="navigate('index.html')">Home</button></li>
+            <li><button onclick="navigate('steps.html')">Steps</button></li>
+            <li><button onclick="navigate('guidelines.html')">Guidelines</button></li>
+            <li><button onclick="navigate('safety.html')">Safety Measures</button></li>
+        </ul>
+    </nav>
+
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const sidebar = document.getElementById('sidebar');
+        const searchBar = document.getElementById('search-bar');
+
+        menuButton.addEventListener('click', () => {
+            sidebar.style.left = (sidebar.style.left === '0px') ? '-250px' : '0px';
+        });
+
+        function navigate(page) {
+            window.location.href = page;
+        }
+
+        searchBar.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                alert('Search for: ' + searchBar.value);
+                searchBar.value = ''; // Clear the search bar after search
+            }
+        });
+    </script>
+
+    <div class="information">
+        <h1>Safety Guidelines for Homemade Biogas Digesters</h1>
+        <img src="/IMG_2260.png" alt="Biogas Digester" class="image"> <!-- Replace with actual image path -->
+        <p><b>Using a homemade biogas digester can be a sustainable and efficient way to manage organic waste and produce renewable energy. However, it’s crucial to implement safety measures to prevent accidents and ensure proper functioning. Here are key safety considerations:</b></p>
+
+        <h2>1. Site Selection and Construction</h2>
+        <p><b>Location:</b> Choose a well-ventilated, dry area away from residential buildings, water sources, and any flammable materials.<br>
+        <b>Foundation:</b> Ensure the digester is built on a stable, solid foundation to prevent collapse.</p>
+
+        <h2>2. Material Safety</h2>
+        <p><b>Construction Materials:</b> Use materials that can withstand anaerobic conditions and are resistant to corrosion (e.g., PVC, HDPE, or stainless steel).<br>
+        <b>Gas Handling:</b> Ensure all pipes and fittings are designed for gas transport to prevent leaks.</p>
+
+        <h2>3. Gas Management</h2>
+        <p><b>Ventilation:</b> Ensure the digester has proper ventilation to prevent the accumulation of dangerous gases like hydrogen sulfide (H2S) and methane (CH4), which can be explosive.<br>
+        <b>Pressure Release:</b> Install pressure relief valves to prevent gas buildup, which could cause explosions or damage to the digester.</p>
+
+        <h2>4. Feedstock Safety</h2>
+        <p><b>Organic Waste:</b> Only use suitable feedstock (e.g., kitchen scraps, agricultural waste). Avoid using toxic or hazardous materials.<br>
+        <b>Pre-treatment:</b> Properly chop or grind feedstock to enhance digestion and minimize the risk of clogs.</p>
+
+        <h2>5. Monitoring and Maintenance</h2>
+        <p><b>Regular Checks:</b> Frequently monitor the digester for leaks, cracks, or any signs of malfunction. Check gas pressure and ensure all connections are secure.<br>
+        <b>pH Levels:</b> Regularly test the pH of the digester contents to ensure optimal digestion conditions (typically around pH 6.5 to 7.5).</p>
+
+        <h2>6. Safety Gear and Precautions</h2>
+        <p><b>Personal Protective Equipment (PPE):</b> Wear gloves, goggles, and a mask when handling materials or working on the digester to protect against exposure to harmful substances.<br>
+        <b>Emergency Preparedness:</b> Have a plan in place for emergency situations, including gas leaks or fire.</p>
+
+        <h2>7. Training and Awareness</h2>
+        <p><b>Education:</b> Ensure that everyone involved in the operation of the digester is knowledgeable about the processes, potential hazards, and safety protocols.<br>
+        <b>Signage:</b> Post clear warning signs around the digester area to alert individuals to potential hazards.</p>
+
+        <h2>8. Legal Compliance</h2>
+        <p><b>Local Regulations:</b> Check and adhere to local laws and regulations regarding the construction and operation of biogas digesters, including environmental and safety standards.</p>
+
+        <h2>9. Gas Utilization</h2>
+        <p><b>Burner Design:</b> If using biogas for cooking or heating, ensure that appliances are designed for biogas use to prevent backflow and ensure safety.<br>
+        <b>Storage Safety:</b> Use appropriate gas storage containers that are certified for biogas and can withstand pressure.</p>
+
+        <h2>Conclusion</h2>
+        <p>Implementing these safety measures can help mitigate risks associated with homemade biogas digesters. Always prioritize safety and seek guidance from experienced individuals or organizations involved in biogas production for additional insights.</p>
+    </div>
+          <footer class="footer">
+    <p>&copy; 2024 Joseph Njuguna. All rights reserved.</p>
+  </footer>
+    <style>
+    .content {
+    min-height: calc(100vh - 50px); /* Adjust the height based on footer height */
+    padding: 20px;
+}
+
+.footer {
+    height: 50px; /* Fixed height for the footer */
+    background-color: #00ff00;
+    color: white;
+    text-align: center;
+    line-height: 50px; /* Center text vertically */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .footer {
+        height: 60px; /* Adjust footer height for smaller screens */
+        line-height: 60px;
+    }
+</style>
+</body>
+
+</html>
