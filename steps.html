@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Biogas Digester Guide</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E0FFFF; /* Light cyan background */
+            color: #333; /* Dark gray text color for readability */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #4CAF50; /* Darker green */
+            padding: 15px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Main Content Styling */
+        main {
+            padding: 20px;
+        }
+
+        /* Section Styling */
+        section {
+            background-color: #F0FFF0; /* Light green (honeydew) */
+            border-left: 5px solid #008000; /* Dark green border */
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #4CAF50; /* Teal again */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            
+        }
+
+        /* Text Shadow */
+        h1, h2 {
+            text-shadow: 1px 1px 3px black; /* Adds black shadow for contrast */
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #388E3C; /* Slightly darker green */
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+            transition: left 0.3s ease;
+            z-index: 10;
+        }
+
+        #sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #sidebar ul li {
+            padding: 15px;
+        }
+
+        #sidebar ul li button {
+            width: 100%;
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+             #menu-button {
+       background-color: white;
+       color: #4CAF50;
+       border: none;
+       padding: 10px;
+       cursor: pointer;
+       border-radius: 5px;
+     }
+
+        #sidebar ul li button:hover {
+            background-color: #f0f0f0; /* Hover effect */
+      }
+
+
+        #search-bar {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #388E3C; /* Slightly darker green */
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+            transition: left 0.3s ease;
+            z-index: 10;
+        }
+
+        #sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #sidebar ul li {
+            padding: 15px;
+        }
+
+        #sidebar ul li button {
+            width: 100%;
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        #sidebar ul li button:hover {
+            background-color: #f0f0f0; /* Hover effect */
+        }
+
+        .logo {
+            height: 50px;
+            width: 50px;
+            margin-left: 20px;
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+      <button id="menu-button">Menu</button>
+      <img src="/IMG_2105.jpeg" alt="Company Logo" class="logo">
+      <input type="text" id="search-bar" placeholder="Search...">
+    </header>
+    <nav id="sidebar">
+      <ul>
+        <li><button onclick="navigate('index.html')">Home</button></li>
+        <li><button onclick="navigate('steps.html')">Steps</button></li>
+        <li><button onclick="navigate('guidelines.html')">Guidelines</button></li>
+        <li><button onclick="navigate('safety.html')">Safety Measures</button></li>
+      </ul>
+    </nav>
+
+    <script>
+      const menuButton = document.getElementById('menu-button');
+      const sidebar = document.getElementById('sidebar');
+      const searchBar = document.getElementById('search-bar');
+
+      menuButton.addEventListener('click', () => {
+        sidebar.style.left = (sidebar.style.left === '0px') ? '-250px' : '0px';
+      });
+
+      function navigate(page) {
+        window.location.href = page;
+      }
+
+      searchBar.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+          alert('Search for: ' + searchBar.value);
+          searchBar.value = ''; // Clear the search bar after search
+        }
+      });
+    </script>
+
+    <!-- Steps Section -->
+    <main>
+        <section>
+          <a href="#"></a>
+            <h2>Step 1: Gather Materials</h2>
+            <p>You'll need a container, rubber tubing, a gas collection bag, organic waste, and water.</p>
+        </section>
+        
+        <section>
+            <h2>Step 2: Set Up the Container</h2>
+            <p>Choose a large, airtight container as the main digester. Drill a hole in the lid for the tubing.</p>
+        </section>
+
+        <section>
+            <h2>Step 3: Add Organic Waste</h2>
+            <p>Fill the container with organic waste like food scraps or animal manure. Add water to cover the waste.</p>
+        </section>
+
+        <section>
+            <h2>Step 4: Connect Tubing</h2>
+            <p>Attach the rubber tubing to the hole in the lid. This will direct biogas to the gas collection bag.</p>
+        </section>
+
+        <section>
+            <h2>Step 5: Store and Monitor</h2>
+            <p>Seal the container tightly, store it in a warm place, and monitor gas production after 1-2 weeks.</p>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Creating a biogas digester is a great way to produce renewable energy at home!</p>
+    </footer>
+
+</body>
+</html>
